@@ -3,7 +3,7 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install default-jdk -y
-wget https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/15/netbeans-15-bin.zip
+wget https://dlcdn.apache.org/netbeans/netbeans/15/netbeans-15-bin.zip
 unzip netbeans-15-bin.zip
 sudo mv netbeans/ /opt/
 echo 'export PATH="$PATH:/opt/netbeans/bin/"' >> /home/$USER/.bashrc
