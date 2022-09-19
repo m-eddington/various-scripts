@@ -21,4 +21,3 @@ echo 'Icon=/opt/netbeans/logotype1.png' >> /home/$USER/.local/share/applications
 sudo wget https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/200px-Apache_NetBeans_Logo.svg.png -O /opt/netbeans/logotype1.png
 echo 'Netbeans installed'
 exit 0
-
