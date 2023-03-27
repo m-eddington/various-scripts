@@ -3,17 +3,17 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install default-jdk -y
-wget https://dlcdn.apache.org/netbeans/netbeans/15/netbeans-15-bin.zip
-if sha512sum netbeans-15-bin.zip | grep '5b1a804223ca74c7d00b0f47c5a6bb2b6548193263f87bbd58ed9e846e3241490705dfa5d1fd2c88b2a4fe2db1a8b135640e76dabc4ab9dea2c170ee02c8e30e' 
+wget https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/17/netbeans-17-bin.zip
+if sha512sum netbeans-17-bin.zip | grep 'f513d86a2a3f86ff56947fa1721426da331d9b5d45a67a4fc460f7eb1cd5e53557eb79ed2feb1dae301012448c05d2bd2c56175fdbd997ba2a09f274d9862dfb' 
 then
-unzip netbeans-15-bin.zip
+unzip netbeans-17-bin.zip
 sudo mv netbeans/ /opt/
 echo 'export PATH="$PATH:/opt/netbeans/bin/"' >> /home/$USER/.bashrc
-rm netbeans-15-bin.zip
+rm netbeans-17-bin.zip
 mkdir /home/$USER/.local/share/applications/
 echo '#!/usr/bin/env xdg-open' >> /home/$USER/local/share/applications/netbeans.desktop
 echo '[Desktop Entry]' >> /home/$USER/.local/share/applications/netbeans.desktop
-echo 'Version=15' >> /home/$USER/.local/share/applications/netbeans.desktop
+echo 'Version=17' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Type=Application' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Terminal=false' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Exec=/opt/netbeans/bin/netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
@@ -25,6 +25,6 @@ echo 'Netbeans installed'
 exit 0
 else
 echo 'Checksum missmatch, please run the install script again.'
-rm netbeans-15-bin.zip
+rm netbeans-17-bin.zip
 exit 0
 fi
