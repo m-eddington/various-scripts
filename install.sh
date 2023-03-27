@@ -3,7 +3,7 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install default-jdk -y
-wget https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/17/netbeans-17-bin.zip
+wget https://dlcdn.apache.org/netbeans/netbeans/17/netbeans-17-bin.zip
 if sha512sum netbeans-17-bin.zip | grep 'f513d86a2a3f86ff56947fa1721426da331d9b5d45a67a4fc460f7eb1cd5e53557eb79ed2feb1dae301012448c05d2bd2c56175fdbd997ba2a09f274d9862dfb' 
 then
 unzip netbeans-17-bin.zip
