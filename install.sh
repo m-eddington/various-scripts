@@ -10,8 +10,8 @@ unzip netbeans-17-bin.zip
 sudo mv netbeans/ /opt/
 echo 'export PATH="$PATH:/opt/netbeans/bin/"' >> /home/$USER/.bashrc
 rm netbeans-17-bin.zip
-mkdir /home/$USER/.local/share/applications/
-echo '#!/usr/bin/env xdg-open' >> /home/$USER/local/share/applications/netbeans.desktop
+mkdir -p /home/$USER/.local/share/applications/
+echo '#!/usr/bin/env xdg-open' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo '[Desktop Entry]' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Version=17' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Type=Application' >> /home/$USER/.local/share/applications/netbeans.desktop
