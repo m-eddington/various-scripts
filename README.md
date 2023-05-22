@@ -1,2 +1,2 @@
 # netbeans-install-script
-A script used for easy install/uninstall of netbeans for our users with Chromebooks.
+Scripts used for installing and uninstalling netbeans, for our users with Chromebooks.
