@@ -3,17 +3,17 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install default-jdk -y
-wget https://dlcdn.apache.org/netbeans/netbeans/18/netbeans-18-bin.zip
-if sha512sum netbeans-18-bin.zip | grep 'f45ed089874b681d912d9650a7d42a674cd15dd4e1a5929d64899fa1383b576b83f050855f749983ecbef216f4d2a9125e30ddc273e282d11f12ce80a4760411'
+wget https://dlcdn.apache.org/netbeans/netbeans/20/netbeans-20-bin.zip
+if sha512sum netbeans-18-bin.zip | grep '59eb2b0e7887f0d962d180c4004a81cf752f12a2b9456c59417daf90a312877f697500580c53566a220bde2a49df2b95ba1e4dedb4cf59b49bdacdc47c98745f'
 then
-unzip netbeans-18-bin.zip
+unzip netbeans-20-bin.zip
 sudo mv netbeans/ /opt/
 echo 'export PATH="$PATH:/opt/netbeans/bin/"' >> /home/$USER/.bashrc
-rm netbeans-18-bin.zip
+rm netbeans-20-bin.zip
 mkdir -p /home/$USER/.local/share/applications/
 echo '#!/usr/bin/env xdg-open' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo '[Desktop Entry]' >> /home/$USER/.local/share/applications/netbeans.desktop
-echo 'Version=18' >> /home/$USER/.local/share/applications/netbeans.desktop
+echo 'Version=20' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Type=Application' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Terminal=false' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Exec=/opt/netbeans/bin/netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
@@ -25,6 +25,6 @@ echo 'Netbeans installed'
 exit 0
 else
 echo 'Checksum missmatch, please run the install script again.'
-rm netbeans-18-bin.zip
+rm netbeans-20-bin.zip
 exit 0
 fi
