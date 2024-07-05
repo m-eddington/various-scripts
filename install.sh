@@ -3,17 +3,17 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install default-jdk -y
-wget https://dlcdn.apache.org/netbeans/netbeans/20/netbeans-20-bin.zip
-if sha512sum netbeans-20-bin.zip | grep '59eb2b0e7887f0d962d180c4004a81cf752f12a2b9456c59417daf90a312877f697500580c53566a220bde2a49df2b95ba1e4dedb4cf59b49bdacdc47c98745f'
+wget https://dlcdn.apache.org/netbeans/netbeans/22/netbeans-22-bin.zip
+if sha512sum netbeans-22-bin.zip | grep '1d8ad549f9a2bfd8ee829691de1f7a22d35d0c2782676e2bc64eec32751e0edbda8a0240eec1ffd0a7e033f9fb2619b9e3ca1ddad40609f1d722a4deea16c0b6'
 then
-unzip netbeans-20-bin.zip
+unzip netbeans-22-bin.zip
 sudo mv netbeans/ /opt/
 echo 'export PATH="$PATH:/opt/netbeans/bin/"' >> /home/$USER/.bashrc
-rm netbeans-20-bin.zip
+rm netbeans-22-bin.zip
 mkdir -p /home/$USER/.local/share/applications/
 echo '#!/usr/bin/env xdg-open' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo '[Desktop Entry]' >> /home/$USER/.local/share/applications/netbeans.desktop
-echo 'Version=20' >> /home/$USER/.local/share/applications/netbeans.desktop
+echo 'Version=22' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Type=Application' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Terminal=false' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Exec=/opt/netbeans/bin/netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
@@ -26,6 +26,6 @@ sudo apt clean
 exit 0
 else
 echo 'Checksum missmatch, please run the install script again.'
-rm netbeans-20-bin.zip
+rm netbeans-22-bin.zip
 exit 0
 fi
