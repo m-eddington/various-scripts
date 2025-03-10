@@ -3,9 +3,9 @@
 # Go to https://netbeans.apache.org/front/main/download/ and select the
 # "Binaries (Platform Independent)" release. Enter the links below.
 # Netbeans link:
-Nlink="https://dlcdn.apache.org/netbeans/netbeans/24/netbeans-24-bin.zip"
+Nlink="https://dlcdn.apache.org/netbeans/netbeans/25/netbeans-25-bin.zip"
 # Netbeans sha512 checksum file:
-Nsha512="https://downloads.apache.org/netbeans/netbeans/24/netbeans-24-bin.zip.sha512"
+Nsha512="https://downloads.apache.org/netbeans/netbeans/25/netbeans-25-bin.zip.sha512"
 ############################################################################################
 sudo apt update
 sudo apt upgrade -y
@@ -13,7 +13,7 @@ sudo apt install default-jdk curl -y
 Nsum=$(curl -s $Nsha512 | cut -c 1-128)
 Nversion=$(curl -s $Nsha512 | cut -c 142-143)
 Nname=$(curl -s $Nsha512 | cut -c 133-151)
-curl -s $Nlink -o $Nname
+curl -s $Nlink -O $Nname
 if sha512sum $Nname | grep $Nsum
 then
 unzip $Nname
@@ -30,7 +30,7 @@ echo 'Exec=/opt/netbeans/bin/netbeans' >> /home/$USER/.local/share/applications/
 echo 'Name=Netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Comment=Netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Icon=/opt/netbeans/logotype1.png' >> /home/$USER/.local/share/applications/netbeans.desktop
-sudo curl -s https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/200px-Apache_NetBeans_Logo.svg.png -o /opt/netbeans/logotype1.png
+sudo curl -s https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/200px-Apache_NetBeans_Logo.svg.png -O /opt/netbeans/logotype1.png
 echo 'Netbeans installed'
 sudo apt clean
 exit 0
