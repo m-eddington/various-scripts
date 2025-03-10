@@ -30,7 +30,7 @@ echo 'Exec=/opt/netbeans/bin/netbeans' >> /home/$USER/.local/share/applications/
 echo 'Name=Netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Comment=Netbeans' >> /home/$USER/.local/share/applications/netbeans.desktop
 echo 'Icon=/opt/netbeans/logotype1.png' >> /home/$USER/.local/share/applications/netbeans.desktop
-sudo curl -s https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/200px-Apache_NetBeans_Logo.svg.png -O /opt/netbeans/logotype1.png
+sudo curl -s https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Apache_NetBeans_Logo.svg/200px-Apache_NetBeans_Logo.svg.png -o /opt/netbeans/logotype1.png
 echo 'Netbeans installed'
 sudo apt clean
 exit 0
