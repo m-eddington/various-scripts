@@ -3,9 +3,9 @@
 # Go to https://netbeans.apache.org/front/main/download/ and select the
 # "Binaries (Platform Independent)" release. Enter the links below.
 # Netbeans link:
-Nlink="https://dlcdn.apache.org/netbeans/netbeans/25/netbeans-25-bin.zip"
+Nlink="https://dlcdn.apache.org/netbeans/netbeans/26/netbeans-26-bin.zip"
 # Netbeans sha512 checksum file:
-Nsha512="https://downloads.apache.org/netbeans/netbeans/25/netbeans-25-bin.zip.sha512"
+Nsha512="https://downloads.apache.org/netbeans/netbeans/26/netbeans-26-bin.zip.sha512"
 ############################################################################################
 sudo apt update
 sudo apt upgrade -y
