@@ -26,7 +26,6 @@ gam csv C:\output.csv gam update user ~primaryEmail archived off
         Write-Host "Enable the account"
 gam csv C:\output.csv gam update user ~primaryEmail suspended off
 
-# make user@domain.tld owner of all classrooms from the accounts who will be deleted so they wont be orphaned.
         Write-Host "Getting Classrooms"
 gam csv C:\output.csv gam print courses teacher ~primaryEmail fields id > C:\classroom.csv
         Write-Host "Classroom add techer"
