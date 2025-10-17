@@ -28,9 +28,9 @@ gam csv C:\output.csv gam update user ~primaryEmail suspended off
 
         Write-Host "Getting Classrooms"
 gam csv C:\output.csv gam print courses teacher ~primaryEmail fields id > C:\classroom.csv
-        Write-Host "Classroom add techer"
+        Write-Host "Classroom add - teacher"
 gam csv C:\classroom.csv gam course ~id add teacher user@domain.tld
-        Write-Host "Classroom make arkiv owner"
+        Write-Host "Classroom make - owner"
 gam csv C:\classroom.csv gam update course ~id owner user@domain.tld
 
         Write-Host "Migrating shared drive files"
